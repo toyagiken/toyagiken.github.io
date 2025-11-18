@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  color: #222;
+  line-height: 1.7;
+  background-color: #f7f7f7;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: min(1100px, 100% - 32px);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffffdd;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.logo-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-main {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.logo-sub {
+  font-size: 11px;
+  color: #777;
+}
+
+.main-nav a {
+  margin-left: 16px;
+  font-size: 14px;
+  color: #444;
+}
+
+.main-nav a:hover {
+  color: #0066cc;
+}
+
+.hero {
+  position: relative;
+  padding: 80px 0 72px;
+  background: linear-gradient(135deg, #0f172a, #1d4ed8);
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.18),
+    transparent 55%
+  );
+}
+
+.hero-content {
+  position: relative;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: clamp(26px, 4vw, 34px);
+  margin: 0 0 8px;
+}
+
+.hero-subtitle {
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.hero-en {
+  margin: 4px 0 12px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.hero-tagline {
+  font-size: 14px;
+  max-width: 640px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: #f97316;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #ea580c;
+  text-decoration: none;
+}
+
+.section {
+  padding: 56px 0;
+  background: #fff;
+}
+
+.section-alt {
+  background: #f1f5f9;
+}
+
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.section-lead {
+  margin: 0 0 16px;
+  color: #555;
+  font-size: 14px;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 32px;
+}
+
+.three-column {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.four-column {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .two-column,
+  .three-column,
+  .four-column {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .main-nav {
+    display: none;
+  }
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  font-size: 14px;
+}
+
+.timeline li {
+  margin-bottom: 6px;
+}
+
+.timeline .year {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-list .card,
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+  font-size: 14px;
+}
+
+.card h3,
+.card h4 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.feature-list,
+.scene-list {
+  list-style: disc;
+  padding-left: 1.2em;
+  font-size: 14px;
+}
+
+.feature-list li,
+.scene-list li {
+  margin-bottom: 4px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-top: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.1);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.note {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+}
+
+.contact-box {
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+  font-size: 14px;
+}
+
+.contact-box p {
+  margin: 4px 0;
+}
+
+.site-footer {
+  border-top: 1px solid #e5e5e5;
+  background: #0f172a;
+  color: #cbd5f5;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 0 14px;
+}
