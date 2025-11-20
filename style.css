@@ -282,3 +282,18 @@ a:hover {
 .usb-video {
   flex: 1 1 300px;
 }
+.usb-video-grid {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.usb-video {
+  text-align: center;
+}
+
+.usb-video p.section-lead {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px !important;
+}
+
