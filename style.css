@@ -271,3 +271,30 @@ a:hover {
   text-align: center;
   padding: 10px 0 14px;
 }
+.usb-video-grid {
+  display: flex;
+  flex-wrap: nowrap;          /* PCでは横並び */
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 8px;
+}
+
+.usb-video {
+  flex: 1 1 0;
+  max-width: 360px;           /* 2本並べるため少し細めに */
+  text-align: center;
+}
+
+.usb-video .video-wrapper iframe {
+  width: 100%;
+  height: 202px;              /* 16:9 の目安（360 x 202） */
+}
+
+/* 画面が狭いとき（スマホ）は縦並びに戻す */
+@media (max-width: 768px) {
+  .usb-video-grid {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
