@@ -318,3 +318,19 @@ a:hover {
     flex: 1 1 auto;
   }
 }
+/* USBドックの video-wrapper をリセットして全体を表示させる */
+.usb-video .video-wrapper {
+  position: static !important;
+  width: 100% !important;
+  height: auto !important;
+  padding-top: 0 !important;
+  overflow: visible !important;
+}
+
+.usb-video .video-wrapper iframe {
+  position: static !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  display: block;
+}
