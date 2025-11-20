@@ -273,64 +273,29 @@ a:hover {
 }
 .usb-video-grid {
   display: flex;
-  flex-wrap: nowrap;          /* PCでは横並び */
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 24px;
   justify-content: center;
   align-items: flex-start;
   margin-top: 8px;
 }
 
 .usb-video {
-  flex: 1 1 0;
-  max-width: 360px;           /* 2本並べるため少し細めに */
-  text-align: center;
-}
-
-
-/* 画面が狭いとき（スマホ）は縦並びに戻す */
-@media (max-width: 768px) {
-  .usb-video-grid {
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-}
-/* USBドック動画レイアウト調整（横並び＋中央寄せ） */
-.usb-video-grid {
-  display: flex;
-  gap: 24px;
-  justify-content: center;   /* 中央寄せ */
-  align-items: flex-start;
-  margin-top: 8px;
-}
-
-.usb-video {
-  flex: 0 0 420px;           /* 1本あたりの幅の目安 */
+  flex: 0 0 360px;   /* 1本あたりの幅の目安 */
   max-width: 100%;
   text-align: center;
 }
 
-/* 画面が狭いとき（スマホ）は縦並び */
-@media (max-width: 768px) {
-  .usb-video-grid {
-    flex-direction: column;
-  }
-  .usb-video {
-    flex: 1 1 auto;
-  }
-}
-/* USBドックの video-wrapper をリセットして全体を表示させる */
-.usb-video .video-wrapper {
-  position: static !important;
-  width: 100% !important;
-  height: auto !important;
-  padding-top: 0 !important;
-  overflow: visible !important;
+.usb-iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
 }
 
-.usb-video .video-wrapper iframe {
-  position: static !important;
-  width: 100% !important;
-  height: auto !important;
-  aspect-ratio: 16 / 9;
-  display: block;
+/* 画面が狭いときは縦並び */
+@media (max-width: 768px) {
+  .usb-video {
+    flex: 1 1 100%;
+  }
 }
