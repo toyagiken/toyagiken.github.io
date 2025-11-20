@@ -10,6 +10,20 @@
     content="遠矢技研は、小型家電から蓄電池応用商品まで、技術と信頼のソリューションを提供します。イーブロックの開発や普及を中心に取り組んでいます。"
   />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- USBドック動画をPCで横並びにするための追記CSS -->
+  <style>
+    @media (min-width: 768px) {
+      .usb-video-grid {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+      }
+      .usb-video-grid .usb-video {
+        flex: 1 1 0;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- ヘッダー -->
@@ -34,8 +48,8 @@
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <h1 class="site-title-sub" style="font-size:18px; font-weight:600; margin-bottom:8px;">
-  遠矢技研（Toya Giken）
-</h1>
+        遠矢技研（Toya Giken）
+      </h1>
       <h1>
         技術と信頼のソリューションを<br />
         <span class="hero-subtitle">小型家電製品から蓄電池応用商品まで</span>
@@ -57,10 +71,10 @@
     <div class="container two-column">
       <div class="col">
         <h2>遠矢代表 プロフィール</h2>
-         <p class="section-lead">
-        遠矢技研は、パナソニック「イーブロック」開発・普及に携わってきた技術者が立ち上げた、
-        小型家電・蓄電池応用商品の企画・導入支援を行う技術事務所です。
-      </p>
+        <p class="section-lead">
+          遠矢技研は、パナソニック「イーブロック」開発・普及に携わってきた技術者が立ち上げた、
+          小型家電・蓄電池応用商品の企画・導入支援を行う技術事務所です。
+        </p>
         <p class="section-lead">From Awaji-Island ／ 阿南高専 電気工学科出身エンジニア</p>
 
         <ul class="timeline">
@@ -103,10 +117,10 @@
   <section id="business" class="section section-alt">
     <div class="container">
       <h2>2025年 遠矢技研の業務状況</h2>
-<p class="section-lead">
-      遠矢技研では、パナソニックの可搬型蓄電池「イーブロック」を中心に、
-      自治体・学校・企業への導入支援や技術アドバイス、資料制作などの業務を行っています。
-    </p>
+      <p class="section-lead">
+        遠矢技研では、パナソニックの可搬型蓄電池「イーブロック」を中心に、
+        自治体・学校・企業への導入支援や技術アドバイス、資料制作などの業務を行っています。
+      </p>
       <p class="section-lead">
         パナソニック「イーブロック」を中心に、企画〜導入支援まで一気通貫でサポート。
       </p>
@@ -132,9 +146,10 @@
 
   <!-- イーブロック -->
   <section id="eblock" class="section">
-  <div class="eblock-series-image" style="text-align:center; margin: 40px 0 60px 0;">
-  <img src="eblock_series.jpg" alt="イーブロックシリーズ" style="max-width:70%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);" />
-</div>
+    <div class="eblock-series-image" style="text-align:center; margin: 40px 0 60px 0;">
+      <img src="eblock_series.jpg" alt="イーブロックシリーズ" style="max-width:70%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);" />
+    </div>
+
     <div class="container two-column">
       <div class="col">
         <h2>電気のバケツ「イーブロック」とは</h2>
@@ -148,43 +163,51 @@
         </ul>
       </div>
 
-<div class="video-wrapper">
-  <iframe
-    src="https://www.youtube.com/embed/we4h_aeUqCk"
-    title="イーブロック開発ストーリー"
-    frameborder="0"
-    allowfullscreen
-  ></iframe>
-</div>
-       <h3 style="margin-top:32px; margin-bottom:12px;">USBドック 紹介編・応用編</h3>
-      <div class="usb-video-grid">
-        <div class="usb-video">
-          <p class="section-lead" style="margin-bottom:8px;">USBドック 紹介編</p>
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/m9LDeWBGn48"
-              title="USBドック 紹介編"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-          </div>
+      <!-- 右カラム：動画エリア -->
+      <div class="col">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/we4h_aeUqCk"
+            title="イーブロック開発ストーリー"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
-        <div class="usb-video">
-          <p class="section-lead" style="margin-bottom:8px;">USBドック 応用編</p>
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/LeztPcYc68g"
-              title="USBドック 応用編"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
+
+        <h3 style="margin-top:32px; margin-bottom:12px;">USBドック 紹介編・応用編</h3>
+
+        <div class="usb-video-grid">
+          <div class="usb-video">
+            <p class="section-lead" style="margin-bottom:8px;">USBドック 紹介編</p>
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/m9LDeWBGn48"
+                title="USBドック 紹介編"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="usb-video">
+            <p class="section-lead" style="margin-bottom:8px;">USBドック 応用編</p>
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/LeztPcYc68g"
+                title="USBドック 応用編"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
   <!-- 使用シーン -->
   <section id="scenes" class="section section-alt">
     <div class="container two-column">
-
       <div class="col">
         <h2>使用シーン（店舗・公共空間）</h2>
         <ul class="scene-list">
