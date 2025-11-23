@@ -364,3 +364,15 @@ a:hover {
   text-align: center;
   width: 100%;
 }
+.hero-photo-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* ← これが決め手！ 縦に並んで中央揃え */
+}
+
+.hero-caption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #e5e7eb;
+  text-align: center;
+}
