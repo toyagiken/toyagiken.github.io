@@ -418,3 +418,15 @@ a:hover {
     max-width: 95% !important;
   }
 }
+/* PC 用（元のまま） */
+.e-block-family-image {
+  text-align: center;
+  margin: 40px 0 60px 0;   /* 上40 / 下60 */
+}
+
+/* スマホでは余白を小さく */
+@media (max-width: 768px) {
+  .e-block-family-image {
+    margin: 20px 0 30px 0;  /* 上20 / 下30 に調整（好みで変更可） */
+  }
+}
