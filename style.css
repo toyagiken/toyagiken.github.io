@@ -18,56 +18,51 @@ background-color: #f7f7f7;
 
 
 /* ここからヒーロー修正版 ----------------------------- */
-
-
 /* ヒーローの背景など既存設定 */
 .hero {
-position: relative;
-padding: 80px 0 72px;
-background: linear-gradient(135deg, #0f172a, #1d4ed8);
-color: #fff;
-overflow: hidden;
+  position: relative;
+  padding: 80px 0 72px;
+  background: linear-gradient(135deg, #0f172a, #1d4ed8);
+  color: #fff;
+  overflow: hidden;
 }
 
-
-/* ヒーロー中のテキスト＋写真を横並びにする（新規追加） */
-.hero-content {
-position: relative;
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 20px;
-text-align: left; /* 既存を保持 */
+/* ★テキスト（左）＋写真（右）を横並びにする */
+.hero .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-
-/* 写真の入る右ブロック（新規修正版） */
+/* 写真の入る右ブロック */
 .hero-photo-wrapper {
-flex-shrink: 0;
-margin-left: auto; /* 写真を右端へ */
-margin-right: 10px;
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: 10px;
 }
-
 
 /* 写真サイズ（小さめ） */
 .hero-photo-small {
-width: 150px; /* 必要なら130～160pxで微調整 */
-height: auto;
-border-radius: 8px;
-box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  width: 150px;        /* 必要なら 130〜160px で調整 */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-
-/* スマホ時は縦並びに（写真が下へ） */
+/* スマホ時は縦並びに（写真が下） */
 @media (max-width: 768px) {
-.hero .container{
-flex-direction: column;
-text-align: center;
-}
-.hero-photo-wrapper {
-margin: 20px auto 0;
-}
-.hero-photo-small {
-width: 160px; /* スマホでは少し大きめ */
-}
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-photo-wrapper {
+    margin: 20px auto 0;
+  }
+
+  .hero-photo-small {
+    width: 160px;  /* スマホでは少し大きめでもOK */
+  }
 }
