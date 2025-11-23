@@ -234,3 +234,17 @@ background-color: #f7f7f7;
     width: 200px;
   }
 }
+/* 必ず写真にスタイルが当たる正しい定義 */
+.hero-photo-small {
+  width: 300px;    /* 写真サイズ（大きくしたければ 320〜350px） */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* 写真を右下に配置 */
+.hero-photo-wrapper {
+  position: absolute;
+  bottom: 40px;   /* もっと下げたければ 20〜30px */
+  right: 40px;    /* もっと右寄せしたければ 20px */
+}
