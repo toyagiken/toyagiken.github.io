@@ -248,3 +248,17 @@ background-color: #f7f7f7;
   bottom: 40px;   /* もっと下げたければ 20〜30px */
   right: 40px;    /* もっと右寄せしたければ 20px */
 }
+/* 写真を右下に配置 */
+.hero-photo-wrapper {
+  position: absolute;
+  bottom: 40px;   /* もっと下にしたければ 20〜30px に調整 */
+  right: 40px;    /* もっと端に寄せたければ 20px など */
+}
+
+/* 写真のサイズと見た目 */
+.hero-photo-small {
+  width: 320px;   /* 大きさ。大きすぎれば 280〜300px に変更 */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
