@@ -357,3 +357,10 @@ a:hover {
   />
   <p class="hero-caption">一生懸命に遊ぶ</p>
 </div>
+.hero-caption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #e5e7eb;   /* 明るいグレー */
+  text-align: center;
+  width: 100%;
+}
