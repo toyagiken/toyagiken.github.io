@@ -521,13 +521,13 @@ a:hover {
 
 /* 見出しを中央揃え */
 .section.partners h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 2rem;
 }
 
 /* リード文も中央揃え */
 .section.partners p {
-  text-align: center;
+  text-align: left;
   margin-bottom: 2.5rem;
 }
 
