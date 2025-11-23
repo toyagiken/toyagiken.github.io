@@ -204,6 +204,32 @@ background-color: #f7f7f7;
     margin: 20px auto 0;
     text-align: center;
   }
+  /* ===== 写真を右下に大きく配置（確定版） ===== */
+
+.hero-photo-wrapper {
+  position: absolute;
+  bottom: 40px;   /* 写真を上下に動かす：大きければ 20〜60 で調整 */
+  right: 40px;    /* 写真を左右に動かす：20 にすれば右端寄り */
+}
+
+.hero-photo-small {
+  width: 380px !important;   /* ← ★絶対に大きくなる（400でもOK） */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* スマホ時は中央に */
+@media (max-width: 768px) {
+  .hero-photo-wrapper {
+    position: static !important;
+    margin: 20px auto 0;
+    text-align: center;
+  }
+  .hero-photo-small {
+    width: 240px !important;
+  }
+}
   .hero-photo-small {
     width: 200px;
   }
