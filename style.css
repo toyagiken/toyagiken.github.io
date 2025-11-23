@@ -404,3 +404,17 @@ a:hover {
     max-width: 95%;   /* ← 大きくしたいなら 90〜100% に調整可 */
   }
 }
+/* PCでは60% */
+.eblock-img {
+  max-width: 60%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* スマホでは100%（好みで90〜100%へ） */
+@media (max-width: 768px) {
+  .eblock-img {
+    max-width: 95% !important;
+  }
+}
