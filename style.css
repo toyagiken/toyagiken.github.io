@@ -461,3 +461,13 @@ a:hover {
     margin: 10px 0 20px 0;   /* 上10px 下20px に調整 */
   }
 }
+@media (max-width: 768px) {
+  #eblock.section {
+    padding-top: 10px;     /* ← もっと詰める */
+    padding-bottom: 20px;  /* ← 下もほどよく */
+  }
+
+  .e-block-family-image {
+    margin: 8px 0 16px 0;  /* ← 上8px 下16pxに圧縮（微調整ポイント） */
+  }
+}
