@@ -1,24 +1,75 @@
-/* 修正版：遠矢技研HP ヒーロー部分の写真配置CSS */
-
-
-/* --- 既存CSSはそのまま --- */
+/* ===== 共通設定 ===== */
 * {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 
 body {
-margin: 0;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-"Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
-color: #222;
-line-height: 1.7;
-background-color: #f7f7f7;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  color: #222;
+  line-height: 1.7;
+  background-color: #f7f7f7;
 }
 
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
 
-/* ==== ヒーロー（青い帯）ここから ==== */
-/* --- HERO（青帯）背景 --- */
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: min(1100px, 100% - 32px);
+  margin: 0 auto;
+}
+
+/* ===== ヘッダー ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffffdd;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.logo-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-main {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.logo-sub {
+  font-size: 11px;
+  color: #777;
+}
+
+.main-nav a {
+  margin-left: 16px;
+  font-size: 14px;
+  color: #444;
+}
+
+.main-nav a:hover {
+  color: #0066cc;
+}
+
+/* ===== ヒーロー（青帯） ===== */
+
 .hero {
   position: relative;
   padding: 80px 0 72px;
@@ -37,28 +88,26 @@ background-color: #f7f7f7;
   );
 }
 
-/* --- HERO内部レイアウト（テキスト ＋ 写真 の横並び）--- */
+/* テキスト＋写真を左右に並べる */
 .hero .container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 60px;
-
-  /* ★文字が左に寄り過ぎ問題 → これで中央寄りに改善 */
-  padding: 0 48px;
+  gap: 40px;
 }
 
-/* --- 左側：テキストブロック --- */
+/* 左側テキスト */
 .hero-content {
+  position: relative;
   flex: 1 1 auto;
   text-align: left;
   max-width: 640px;
 }
 
 .hero h1 {
-  font-size: clamp(28px, 4vw, 38px);
-  margin: 0 0 12px;
+  font-size: clamp(26px, 4vw, 34px);
+  margin: 0 0 8px;
   line-height: 1.4;
 }
 
@@ -68,22 +117,20 @@ background-color: #f7f7f7;
 }
 
 .hero-en {
-  margin: 8px 0 14px;
-  font-size: 15px;
+  margin: 6px 0 12px;
+  font-size: 14px;
   opacity: 0.9;
-  line-height: 1.6;
 }
 
 .hero-tagline {
   font-size: 14px;
   margin-bottom: 20px;
-  line-height: 1.7;
 }
 
-/* --- ボタン --- */
+/* ボタン */
 .btn-primary {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 999px;
   background: #f97316;
   color: #fff;
@@ -97,27 +144,74 @@ background-color: #f7f7f7;
   text-decoration: none;
 }
 
-/* --- 右側：写真 --- */
+/* 右側写真 */
 .hero-photo-wrapper {
   flex: 0 0 auto;
   margin-left: auto;
-  margin-right: 10px;
 }
 
-/* ★写真サイズ：大きく見やすく（230px推奨） */
 .hero-photo-small {
-  width: 230px;     /* 150 → 230px へ拡大 */
+  width: 260px;   /* 大きすぎれば 220〜240 に下げてください */
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
-/* --- スマホ時（縦並び） --- */
-@media (max-width: 768px) {
+/* ===== セクション共通 ===== */
+.section {
+  padding: 56px 0;
+  background: #fff;
+}
+
+.section-alt {
+  background: #f1f5f9;
+}
+
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.section-lead {
+  margin: 0 0 16px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* ===== グリッドレイアウト ===== */
+
+.two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 32px;
+}
+
+.three-column {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.four-column {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .two-column,
+  .three-column,
+  .four-column {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .main-nav {
+    display: none;
+  }
+
   .hero .container {
     flex-direction: column;
     text-align: center;
-    padding: 0 20px;
   }
 
   .hero-content {
@@ -125,140 +219,134 @@ background-color: #f7f7f7;
   }
 
   .hero-photo-wrapper {
-    margin: 24px auto 0;
+    margin-top: 24px;
   }
 
   .hero-photo-small {
     width: 200px;
   }
 }
-.hero {
+
+/* ===== プロフィールなど ===== */
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  font-size: 14px;
+}
+
+.timeline li {
+  margin-bottom: 6px;
+}
+
+.timeline .year {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-list .card,
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+  font-size: 14px;
+}
+
+.card h3,
+.card h4 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.feature-list,
+.scene-list {
+  list-style: disc;
+  padding-left: 1.2em;
+  font-size: 14px;
+}
+
+.feature-list li,
+.scene-list li {
+  margin-bottom: 4px;
+}
+
+/* ===== YouTube 埋め込み ===== */
+
+.video-wrapper {
   position: relative;
-  padding: 80px 0 72px;
-  background: linear-gradient(135deg, #0f172a, #1d4ed8);
-  color: #fff;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-top: 8px;
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.1);
 }
 
-/* テキストは普通のブロックのまま */
-.hero-content {
-  position: relative;
-  text-align: left;
-  max-width: 640px;
-  padding: 0 32px;   /* 左右に少し余白（お好みで 24〜48px に調整可） */
-}
-
-/* 写真ブロック：青帯の右側に絶対配置 */
-.hero-photo-wrapper {
+.video-wrapper iframe {
   position: absolute;
-  top: 50%;
-  right: 64px;               /* 右端からの距離。もっと右なら 40px, 左なら 80px など調整 */
-  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
-/* 写真サイズ：はっきり見える大きさに */
-.hero-photo-small {
-  width: 260px;              /* ここで大きさを調整。小さくしたければ 220〜240px など */
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+/* USBドック用 横並びレイアウト */
+.usb-video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 8px;
 }
 
-/* スマホ・タブレットでは縦並びにして見やすくする */
-@media (max-width: 900px) {
-  .hero-photo-wrapper {
-    position: static;
-    transform: none;
-    margin: 24px auto 0;
-    text-align: center;
-  }
-
-  .hero-photo-small {
-    width: 200px;
-  }
-
-  .hero-content {
-    padding: 0 16px;
-    text-align: center;
-  }
-}
-/* ===== 写真を右下に配置 ===== */
-.hero-photo-wrapper {
-  position: absolute;
-  bottom: 40px;      /* ← 右下からの上下位置（大きければ20〜60） */
-  right: 40px;       /* ← 右端からの距離（大きければ20〜60） */
+.usb-video {
+  flex: 0 0 360px;
+  max-width: 100%;
+  text-align: center;
 }
 
-/* 写真サイズ（右下は少し大きめが綺麗） */
-.hero-photo-small {
-  width: 280px;      /* ← 260〜320 で調整可 */
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+.usb-iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
 }
 
-/* スマホでは中央下に表示 */
 @media (max-width: 768px) {
-  .hero-photo-wrapper {
-    position: static;
-    margin: 20px auto 0;
-    text-align: center;
-  }
-  /* ===== 写真を右下に大きく配置（確定版） ===== */
-
-.hero-photo-wrapper {
-  position: absolute;
-  bottom: 40px;   /* 写真を上下に動かす：大きければ 20〜60 で調整 */
-  right: 40px;    /* 写真を左右に動かす：20 にすれば右端寄り */
-}
-
-.hero-photo-small {
-  width: 380px !important;   /* ← ★絶対に大きくなる（400でもOK） */
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-}
-
-/* スマホ時は中央に */
-@media (max-width: 768px) {
-  .hero-photo-wrapper {
-    position: static !important;
-    margin: 20px auto 0;
-    text-align: center;
-  }
-  .hero-photo-small {
-    width: 240px !important;
+  .usb-video {
+    flex: 1 1 100%;
   }
 }
-  .hero-photo-small {
-    width: 200px;
-  }
-}
-/* 必ず写真にスタイルが当たる正しい定義 */
-.hero-photo-small {
-  width: 300px;    /* 写真サイズ（大きくしたければ 320〜350px） */
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+
+/* ===== お問い合わせ・フッター ===== */
+
+.contact-box {
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+  font-size: 14px;
 }
 
-/* 写真を右下に配置 */
-.hero-photo-wrapper {
-  position: absolute;
-  bottom: 40px;   /* もっと下げたければ 20〜30px */
-  right: 40px;    /* もっと右寄せしたければ 20px */
-}
-/* 写真を右下に配置 */
-.hero-photo-wrapper {
-  position: absolute;
-  bottom: 40px;   /* もっと下にしたければ 20〜30px に調整 */
-  right: 40px;    /* もっと端に寄せたければ 20px など */
+.contact-box p {
+  margin: 4px 0;
 }
 
-/* 写真のサイズと見た目 */
-.hero-photo-small {
-  width: 320px;   /* 大きさ。大きすぎれば 280〜300px に変更 */
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+.site-footer {
+  border-top: 1px solid #e5e5e5;
+  background: #0f172a;
+  color: #cbd5f5;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 0 14px;
 }
