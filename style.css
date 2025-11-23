@@ -17,8 +17,8 @@ background-color: #f7f7f7;
 }
 
 
-/* ここからヒーロー修正版 ----------------------------- */
-/* ヒーローの背景など既存設定 */
+/* ==== ヒーロー（青い帯）ここから ==== */
+
 .hero {
   position: relative;
   padding: 80px 0 72px;
@@ -27,34 +27,92 @@ background-color: #f7f7f7;
   overflow: hidden;
 }
 
-/* ★テキスト（左）＋写真（右）を横並びにする */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.18),
+    transparent 55%
+  );
+}
+
+/* 左：テキスト / 右：写真 を横並びにする */
 .hero .container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 40px;
 }
 
-/* 写真の入る右ブロック */
+/* テキスト側 */
+.hero-content {
+  flex: 1 1 auto;
+  text-align: left;
+  max-width: 640px;
+}
+
+.hero h1 {
+  font-size: clamp(26px, 4vw, 34px);
+  margin: 0 0 8px;
+}
+
+.hero-subtitle {
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.hero-en {
+  margin: 4px 0 12px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.hero-tagline {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* ボタン */
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: #f97316;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #ea580c;
+  text-decoration: none;
+}
+
+/* 写真側 */
 .hero-photo-wrapper {
-  flex-shrink: 0;
+  flex: 0 0 auto;
   margin-left: auto;
   margin-right: 10px;
 }
 
-/* 写真サイズ（小さめ） */
 .hero-photo-small {
-  width: 150px;        /* 必要なら 130〜160px で調整 */
+  width: 150px;          /* 小さめ。大きければ 130〜160 で調整 */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-/* スマホ時は縦並びに（写真が下） */
+/* スマホでは上下に並べる */
 @media (max-width: 768px) {
   .hero .container {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
     text-align: center;
   }
 
@@ -63,6 +121,8 @@ background-color: #f7f7f7;
   }
 
   .hero-photo-small {
-    width: 160px;  /* スマホでは少し大きめでもOK */
+    width: 160px;
   }
 }
+
+/* ==== ヒーロー（青い帯）ここまで ==== */
