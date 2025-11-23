@@ -471,3 +471,43 @@ a:hover {
     margin: 8px 0 16px 0;  /* ← 上8px 下16pxに圧縮（微調整ポイント） */
   }
 }
+/* 仲間セクションの中央寄せ調整 */
+.section.partners {
+  max-width: 900px;       /* 横幅を制限して中央に集める */
+  margin: 0 auto;         /* 左右中央寄せの決め手 */
+  padding: 2.5rem 1rem;   /* 適度な余白 */
+  line-height: 1.8;       /* 読みやすい行間 */
+}
+
+/* 見出しの中央揃え */
+.section.partners h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* リード文も中央揃え */
+.section.partners p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* パートナー一覧の全体を中央寄せ */
+.partner-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* 各項目の行間と余白調整 */
+.partner-item {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.partner-field {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.partner-company {
+  margin-left: 0.5rem;
+}
