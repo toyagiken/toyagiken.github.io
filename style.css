@@ -392,3 +392,15 @@ a:hover {
   flex-direction: column;
   align-items: center;    /* 中央揃えは維持 */
 }
+/* PC（デスクトップ）は60%のまま */
+.eblock-img {
+  max-width: 60%;
+  height: auto;
+}
+
+/* スマホ（768px以下）だけ大きくする */
+@media (max-width: 768px) {
+  .eblock-img {
+    max-width: 95%;   /* ← 大きくしたいなら 90〜100% に調整可 */
+  }
+}
