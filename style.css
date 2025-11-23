@@ -387,7 +387,7 @@ a:hover {
 
 /* 写真全体の位置を少し下げて、文章と上端を揃える */
 .hero-photo-wrapper {
-  margin-top: 28px;       /* ← 数値で微調整可能（15〜30pxが最適ゾーン） */
+  margin-top: 30px;       /* ← 数値で微調整可能（15〜30pxが最適ゾーン） */
   display: flex;
   flex-direction: column;
   align-items: center;    /* 中央揃えは維持 */
