@@ -451,3 +451,13 @@ a:hover {
     margin: 16px 0 32px 0;  /* ← 上だけグッと詰める */
   }
 }
+@media (max-width: 768px) {
+  .section {
+    padding: 20px 0;   /* ← 上下の余白を40px → 20px に圧縮 */
+  }
+}
+@media (max-width: 768px) {
+  .e-block-family-image {
+    margin: 10px 0 20px 0;   /* 上10px 下20px に調整 */
+  }
+}
