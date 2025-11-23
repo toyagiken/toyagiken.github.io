@@ -182,3 +182,29 @@ background-color: #f7f7f7;
     text-align: center;
   }
 }
+/* ===== 写真を右下に配置 ===== */
+.hero-photo-wrapper {
+  position: absolute;
+  bottom: 40px;      /* ← 右下からの上下位置（大きければ20〜60） */
+  right: 40px;       /* ← 右端からの距離（大きければ20〜60） */
+}
+
+/* 写真サイズ（右下は少し大きめが綺麗） */
+.hero-photo-small {
+  width: 280px;      /* ← 260〜320 で調整可 */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* スマホでは中央下に表示 */
+@media (max-width: 768px) {
+  .hero-photo-wrapper {
+    position: static;
+    margin: 20px auto 0;
+    text-align: center;
+  }
+  .hero-photo-small {
+    width: 200px;
+  }
+}
