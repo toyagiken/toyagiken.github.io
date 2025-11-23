@@ -542,3 +542,29 @@ a:hover {
   padding: 1rem 0;
   border-bottom: 1px solid #ddd;
 }
+/* 仲間セクションの横幅を調整して、中央にまとまるようにする */
+.section.partners {
+  max-width: 950px;    /* ★ 1100 → 950px に変更 */
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  line-height: 1.9;
+}
+
+/* 見出しは左揃えのまま */
+.section.partners h2 {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+/* リード文も左揃えのまま */
+.section.partners p {
+  text-align: left;
+  margin: 0 auto 2.5rem auto;
+  max-width: 900px;   /* ★ 本文部分の幅も整える */
+}
+
+/* パートナー一覧も同じ幅で中央に配置 */
+.partner-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
