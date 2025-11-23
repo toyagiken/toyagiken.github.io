@@ -151,10 +151,9 @@ a:hover {
 }
 
 .hero-photo-small {
-  width: 260px;   /* 大きすぎれば 220〜240 に下げてください */
+  width: 90% !important;
+  max-width: 260px;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
 /* ===== セクション共通 ===== */
