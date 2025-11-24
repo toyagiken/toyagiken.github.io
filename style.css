@@ -871,3 +871,33 @@ a:hover {
 .case-list li strong {
   font-weight: 600;
 }
+.case-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.case-photo {
+  flex: 1 1 260px;
+  text-align: center;
+}
+
+.case-photo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.case-photo figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* スマホでは縦並びに */
+@media (max-width: 768px) {
+  .case-photos {
+    flex-direction: column;
+  }
+}
