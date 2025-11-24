@@ -940,3 +940,41 @@ a:hover {
   margin-bottom: 0.6rem;
   line-height: 1.7;
 }
+/* 導入実績：横並び写真レイアウト */
+.case-photos-row {
+  display: flex;           /* ★ これで横並び */
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 2rem;
+}
+
+.case-photo-block {
+  flex: 1;
+  text-align: center;
+}
+
+.case-photo-block img {
+  width: 100%;
+  height: 260px;           /* ★ 高さをそろえる */
+  object-fit: cover;       /* ★ トリミングしつつ歪みなし */
+  border-radius: 6px;
+  display: block;
+}
+
+.photo-caption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* 導入事例リスト */
+.case-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.case-list li {
+  margin-bottom: 0.6rem;
+  line-height: 1.7;
+}
