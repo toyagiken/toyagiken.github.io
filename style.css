@@ -723,3 +723,40 @@ a:hover {
 .media-links a:hover {
   text-decoration: underline;
 }
+.media-section {
+  padding: 3rem 0;      /* 上下の余白だけ確保 */
+  line-height: 1.8;
+}
+
+/* 以下はそのままでOK */
+.media-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid #0a2f70;
+  padding-left: 8px;
+}
+
+.media-lead {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.media-links {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.media-links li {
+  margin-bottom: 0.7rem;
+}
+
+.media-links a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  color: #0a2f70;
+}
+
+.media-links a:hover {
+  text-decoration: underline;
+}
