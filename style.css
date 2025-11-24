@@ -973,7 +973,9 @@ a:hover {
   padding-left: 0;
   margin: 0;
 }
-
+.cases-lead {
+  font-weight: 700 !important;
+}
 .case-list li {
   margin-bottom: 0.6rem;
   line-height: 1.7;
