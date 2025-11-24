@@ -640,3 +640,41 @@ a:hover {
   font-weight: 500;
   margin-bottom: 2rem;
 }
+/* ▼ フェードインの共通アニメーション */
+@keyframes fadein-up {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ▼ ヒーロー全体のアニメ準備 */
+.hero-content > * {
+  opacity: 0;
+  animation: fadein-up 0.8s ease-out forwards;
+}
+
+/* ▼ 順番に表示されるようにディレイ設定 */
+.hero-title {
+  animation-delay: 0.2s;
+}
+
+.hero-subcopy {
+  animation-delay: 0.4s;
+}
+
+.hero-en {
+  animation-delay: 0.6s;
+}
+
+.hero-tagline {
+  animation-delay: 0.8s;
+}
+
+.btn-primary {
+  animation-delay: 1.0s;
+}
